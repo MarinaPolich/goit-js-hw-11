@@ -4,35 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./sass/index.scss" />
   </head>
   <body>
-   <div class="section">
-    <form class="search-form" id="search-form">
-      <input
-        class="search-form_input"
-        type="text"
-        name="searchQuery"
-        autocomplete="off"
-        placeholder="Search images..."
-      />
-      <button class="search-form_button" type="submit">
-        <svg class="search-form_icon icon-search" width="16" height="16">
-          <use href="./images/symbol-defs.svg#icon-search"></use>
+    <div class="section">
+      <form class="search-form" id="search-form">
+        <input
+          class="search-form_input"
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button class="search-form_button" type="submit">
+          <svg class="search-form_icon icon-search" width="16" height="16">
+            <use href="./images/symbol-defs.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+      <div class="toggle">
+        <svg class="toggle_icon" width="32" height="32">
+          <use href="./images/symbol-defs.svg#icon-infinity"></use>
         </svg>
-      </button>
-    </form>
-   </div>
+        <input type="checkbox" id="switch" checked="true" />
+        <label class="toggle_switch" for="switch">Toggle</label>
+      </div>
+    </div>
 
-   <div class="gallery">
-    <!-- Картки зображень -->
-  </div>
+    <div class="gallery">
+      <!-- Картки зображень -->
+    </div>
 
-  <button type="button" class="load-more is-hiden">Load more</button>
+    <button type="button" class="load-more is-hiden">Load more</button>
 
-    <script type="module" src="./index.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
