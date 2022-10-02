@@ -24,7 +24,9 @@ async function onSearch(event) {
 
 buttonLoadMore.addEventListener('click', async () => {
   await galleryObj.nextPage();
-  if (galleryObj.endLoad) buttonLoadMore.classList.add('is-hiden');
+  if (galleryObj.endLoad) {
+    buttonLoadMore.classList.add('is-hiden');
+  }
   const { height: cardHeight } = document
     .querySelector('.gallery')
     .firstElementChild.getBoundingClientRect();

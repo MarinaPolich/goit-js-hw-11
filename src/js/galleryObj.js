@@ -54,7 +54,10 @@ export class GalleryImg {
       renderCard(hits);
       this.#gallery.refresh();
       this.#page += 1;
-      if (this.#page * this.#perPage >= totalHits) this.#endLoad = true;
+      if (this.#page * this.#perPage >= totalHits) {
+        this.#endLoad = true;
+        Notify.info("We're sorry, but you've reached the end of search results.");
+      }
     } finally {
       this.#isLoading = false;
     }
